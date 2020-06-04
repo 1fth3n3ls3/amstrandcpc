@@ -53,7 +53,5 @@ class TestHalt(unittest.TestCase):
 
 class TestJoinInstructs(unittest.TestCase):
     def test_on_join_instructs_requested(self):
-        lst = []
-        lst.append("3E 88 32 00 C0")
-        lst.append('76 76 76 76 76 76')
+        lst = ["3E 88 32 00 C0", '76 76 76 76 76 76']
         self.assertEqual("3E 88 32 00 C0 76 76 76 76 76 76", utils.join_instructs(*lst))
